@@ -77,7 +77,6 @@ Infine, andiamo a definire le colonne e i tipi di dato di ogni tabella.
 - matriculation number CHAR(8)
 - bachelor_courses_id FK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
 
-
 ## Tables exams
 - id PK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
 - name VARCHAR(50)
