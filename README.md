@@ -30,7 +30,9 @@ Infine, andiamo a definire le colonne e i tipi di dato di ogni tabella.
 - insegnanti 
 - appelli 
 - studenti 
+- voti
 - esami 
+
 
 ### Tables departments
 - id  PK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
@@ -77,10 +79,21 @@ Infine, andiamo a definire le colonne e i tipi di dato di ogni tabella.
 - matriculation number CHAR(8)
 - bachelor_courses_id FK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
 
+
+## Tables vote 
+- id PK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
+- student_id FK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
+- exam_id FK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
+- vote VARCHAR(10)
+- 
+
+
 ## Tables exams
 - id PK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
 - name VARCHAR(50)
 - number_test CHAR(10)
-- result VARCHAR(20)
-- student_id FK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
+- courses_id FK, AI, UNIQUE, BIGINT, UNSIGNED, INDEX
+
+
+
 
