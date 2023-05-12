@@ -2333,3 +2333,10 @@ Es:
 
 
 
+7. SELECT COUNT(*) FROM `departments`;
++----------+
+| COUNT(*) |
++----------+
+|       12 |
++----------+
+1 row in set (0.00 sec)
