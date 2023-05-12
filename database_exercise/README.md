@@ -2334,12 +2334,26 @@ Es:
 
 
 7. SELECT COUNT(*) FROM `departments`;
-+----------+
 | COUNT(*) |
 +----------+
 |       12 |
 +----------+
 1 row in set (0.00 sec)
+
+7. SELECT `name` FROM `departments`;
++----------+ +----------------------------------------------------------------------+
+| Dipartimento di Biologia                                             |
+| Dipartimento di Fisica e astronomia                                  |
+| Dipartimento di Ingegneria civile, edile e ambientale                |
+| Dipartimento di Ingegneria dell'informazione                         |
+| Dipartimento di Matematica                                           |
+| Dipartimento di Medicina                                             |
+| Dipartimento di Neuroscienze                                         |
+| Dipartimento di Scienze chimiche                                     |
+| Dipartimento di Scienze economiche e aziendali                       |
+| Dipartimento di Scienze politiche, giuridiche e studi internazionali |
+| Dipartimento di Scienze statistiche                                  |
+| Dipartimento di Studi linguistici e letterari  
 
 8. SELECT COUNT(*) FROM `teachers` WHERE `phone` IS NULL; 
 +----------+
@@ -2348,3 +2362,60 @@ Es:
 |       50 |
 +----------+
 1 row in set (0.00 sec)
+
+8. SELECT `name`, `phone` FROM `teachers` WHERE `phone` IS NULL;
++-------------+-------+
+| name        | phone |
++-------------+-------+
+| Gianantonio | NULL  |
+| Erminia     | NULL  |
+| Arduino     | NULL  |
+| Bernardo    | NULL  |
+| Demis       | NULL  |
+| Arduino     | NULL  |
+| Lorenzo     | NULL  |
+| Ione        | NULL  |
+| Marvin      | NULL  |
+| Michele     | NULL  |
+| Clea        | NULL  |
+| Rudy        | NULL  |
+| Genziana    | NULL  |
+| Cassiopea   | NULL  |
+| Elsa        | NULL  |
+| Gavino      | NULL  |
+| Rufo        | NULL  |
+| Guendalina  | NULL  |
+| Vitalba     | NULL  |
+| Vania       | NULL  |
+| Penelope    | NULL  |
+| Fulvio      | NULL  |
+| Eliziario   | NULL  |
+| Bibiana     | NULL  |
+| Nabil       | NULL  |
+| Nathan      | NULL  |
+| Folco       | NULL  |
+| Pablo       | NULL  |
+| Cira        | NULL  |
+| Timothy     | NULL  |
+| Piersilvio  | NULL  |
+| Eusebio     | NULL  |
+| Giovanna    | NULL  |
+| Felicia     | NULL  |
+| Iacopo      | NULL  |
+| Jarno       | NULL  |
+| Maika       | NULL  |
+| Ortensia    | NULL  |
+| Kristel     | NULL  |
+| Joey        | NULL  |
+| Laerte      | NULL  |
+| Felicia     | NULL  |
+| Isira       | NULL  |
+| Radames     | NULL  |
+| Diamante    | NULL  |
+| Piererminio | NULL  |
+| Sebastian   | NULL  |
+| Kociss      | NULL  |
+| Marina      | NULL  |
+| Cristyn     | NULL  |
++-------------+-------+
+50 rows in set (0.00 sec)
