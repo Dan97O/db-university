@@ -2340,3 +2340,11 @@ Es:
 |       12 |
 +----------+
 1 row in set (0.00 sec)
+
+8. SELECT COUNT(*) FROM `teachers` WHERE `phone` IS NULL; 
++----------+
+| COUNT(*) |
++----------+
+|       50 |
++----------+
+1 row in set (0.00 sec)
