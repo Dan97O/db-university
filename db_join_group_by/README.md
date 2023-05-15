@@ -1,5 +1,10 @@
 Query con Join:
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT `students`.*, `degrees`.`name`
+FROM `students`
+JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
+
 2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il
@@ -14,3 +19,5 @@ Query con Group by:
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 3. Calcolare la media dei voti di ogni appello d'esame
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+
