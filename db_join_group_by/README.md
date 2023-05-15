@@ -44,34 +44,34 @@ WHERE `departments`.`name` = 'Dipartimento di Matematica';
 
 7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per
   superare ciascuno dei suoi esami
-SELECT students.id AS student_id, students.name AS student_name, students.surname AS student_surname, exams.id AS exam_id, exam_student.vote AS vote,
-COUNT(*) AS num_attempts
-FROM students
-JOIN exam_student ON students.id = exam_student.student_id
-JOIN exams ON exam_student.exam_id = exams.id
-GROUP BY students.id, students.name, exams.id;
+SELECT `students`.`id` AS `student_id`, `students`.`name` AS `student_name`, `students`.`surname` AS `student_surname`, `exams`.`id` AS `exam_id`, `exam_student`.`vote` AS `vote`,
+COUNT(*) AS `num_attempts`
+FROM `students`
+JOIN `exam_student` ON `students`.`id` = `exam_student`.`student_id`
+JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
+GROUP BY `students`.`id`, `students`.`name`, `exams`.`id`;
 
 Query con Group by:
 1. Contare quanti iscritti ci sono stati ogni anno
-SELECT YEAR(enrolment_date) AS year, COUNT(*) AS num_students
-FROM students
-GROUP BY YEAR(enrolment_date);
+SELECT YEAR(`enrolment_date`) AS `year`, COUNT(*) AS `num_students`
+FROM `students`
+GROUP BY YEAR(`enrolment_date`);
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
-SELECT office_address, COUNT(*) AS num_teachers
-FROM teachers
-GROUP BY office_address
+SELECT `office_address`, COUNT(*) AS `num_teachers`
+FROM `teachers`
+GROUP BY `office_address`
 HAVING COUNT(*) > 1;
 
 3. Calcolare la media dei voti di ogni appello d'esame
-SELECT exam_id, AVG(vote) AS average_vote
-FROM exam_student
-GROUP BY exam_id;
+SELECT `exam_id`, AVG(`vote`) AS `average_vote`
+FROM `exam_student`
+GROUP BY `exam_id`;
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
-SELECT departments.name AS department_name, COUNT(degrees.id) AS num_degrees
-FROM departments
-JOIN degrees ON departments.id = degrees.department_id
-GROUP BY departments.name;
+SELECT `departments`.`name` AS `department_name`, COUNT(`degrees`.`id`) AS `num_degrees`
+FROM `departments`
+JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`
+GROUP BY `departments`.`name`;
 
 
