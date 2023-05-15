@@ -44,12 +44,13 @@ WHERE `departments`.`name` = 'Dipartimento di Matematica';
 
 7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per
   superare ciascuno dei suoi esami
-SELECT `students`.`id` AS `student_id`, `students`.`name` AS `student_name`, `students`.`surname` AS `student_surname`, `exams`.`id` AS `exam_id`, `exam_student`.`vote` AS `vote`,
-COUNT(*) AS `num_attempts`
-FROM `students`
-JOIN `exam_student` ON `students`.`id` = `exam_student`.`student_id`
-JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
-GROUP BY `students`.`id`, `students`.`name`, `exams`.`id`;
+Select `students`.`surname` AS `student_surname`, `students`.`name` AS `student_name`, `courses`.`name`, COUNT(*) 
+FROM `exam_student` 
+JOIN `students` ON `exam_student`.`student_id` = `students`.`id` 
+JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id` 
+JOIN `courses` ON `exams`.`course_id` = `courses`.`id` 
+GROUP BY `students`.`surname`, `students`.`name` , `courses`.`name`;
+
 
 Query con Group by:
 1. Contare quanti iscritti ci sono stati ogni anno
